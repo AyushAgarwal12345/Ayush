@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Cano';
+    src: url('/font/canopee.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dono';
+    src: url('/font/domain.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100% - 34px));
+    }
+}
+
+.has-dropcap {
+    /* font-size: 7.25vw; */
+    /* line-height: 7.5vw; */
+    text-align: left;
+    letter-spacing: -0.03em;
+}
+
+.has-dropcap:first-letter {
+    font-family: "Cano", sans-serif;
+    font-feature-settings: "ss03";
+    float: left;
+    /* font-size: 20vw; */
+    /* line-height: 17vw; */
+    margin: 1vw 2vw 1vw 0vw;
+    background-color: #1D1D1B;
+    color: #CDC6BE;
+    padding: 1.5vw .8vw .5vw 1vw;
+
+}
+
+body {
+    background-image: url("/img/texture-1.jpg");
+    background-repeat: repeat;
+    background-size: 100px;
+    /* Adjust the size of the repeat pattern */
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* -------------------------skills---------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Dono&family=Cano&display=swap');
+
+.font-dono {
+    font-family: 'Dono', serif;
+}
+
+.font-cano {
+    font-family: 'Cano', serif;
+}
+
+.scroll-loop {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 30s linear infinite;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* ---------------------------------------------- */
+
+/* ============================cardshobbie======================= */
+.card-content {
+    transition: max-width 0.5s ease-in-out;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.card:hover .card-content {
+    white-space: normal;
+    max-width: 40rem;
+}
+
+.card {
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+
+.card-border {
+    border: 2px dashed #333;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* ========================================================== */
